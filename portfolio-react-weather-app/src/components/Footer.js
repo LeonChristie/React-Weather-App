@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <div>
-      <p>Developed by Leon Christie</p>
-    </div>
+    <footer className="mt-auto">
+      <p className="fw-light">React Weather App, developed by Leon Christie</p>
+    </footer>
   )
 }
 

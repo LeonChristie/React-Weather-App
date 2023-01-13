@@ -1,32 +1,101 @@
-body {
-background: url(../public/image-from-rawpixel-id-2620407-jpeg.jpg);
-background-position: center;
-background-size: auto;
-text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+
+body {
+font-family: 'Kanit', sans-serif;
+background: #FCDAC5; 
+text-align: center;
 }
 
-
-
+/* SEARCH BAR */
 input {
-    width: 80%;
-    max-width: 1000px;
     height: 50px;
-    border-radius: 30px;
     border: none;
     padding: 30px 30px;
-    background:rgba(81, 81, 81, 0.472);
     backdrop-filter: blur(1px);
-}
-
-input:active{
-    outline: red;
-}
-
-/* Current Weather Compomponent */
-.current-weather{
+    border: 5px solid #fde7d8;
+    background: #F7A164;
+    border-radius: 15px;
+    color: #4B4237;
+    box-shadow: rgba(255, 255, 255, 0.677) 0px 8px 24px 8px;
     width: 80%;
     max-width: 1000px;
-    background:rgba(81, 81, 81, 0.472);
-    border-radius: 30px;
+    font-weight: 300;
 }
+input:focus{
+    outline: none;
+}
+
+
+/* WEATHER COMPONENTS */
+.weather-components{
+    width: 80%;
+    max-width: 1000px;
+    background: #F7A164;
+    border-radius: 15px;
+    color:#4B4237;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 200;
+}
+
+/* CURRENT COMONENT */
+.temp-now{
+    font-size: 50px;
+}
+.current-bottom{
+    font-size: 20px;
+}
+
+/* FORECAST COMPONENTS */
+.time-date{
+    margin-bottom: 0;
+    padding: 10px 0 0;
+    font-size: 700;
+}
+
+.temp{
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.forecast-display{
+    column-count: 5;
+}
+
+.forecast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FOOTER */
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 576px) {
+    .forecast-display{
+        column-count: 1;
+    }
+    .forecast{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+    .time-date, .temp{
+        padding: 0;
+        font-size: 20px;
+    }
+    .today {
+        margin-bottom: 15px;
+    }
+    .current-bottom{
+        font-size: 15px;
+    }
+}
+
+

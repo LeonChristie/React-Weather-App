@@ -9,8 +9,9 @@ const Search = ({ submitSearch }) => {
   };
 
   return (
-    <form className="mt-3" onSubmit={onSubmit}>
+    <form className="search mt-4" onSubmit={onSubmit}>
       <input
+        id="seachInput"
         type="text"
         placeholder="Search"
         onChange={(e) => setPlace(e.target.value)}

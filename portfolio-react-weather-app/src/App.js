@@ -13,14 +13,14 @@ function App() {
   useEffect(() => {
     const fetchCoords = async () => {
       const geoRes = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${process.env.REACT_APP_WEATHER_API}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${process.env.REACT_APP_WEATHER_API}`
       );
       const data = await geoRes.json();
       const currentRes = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?lat=${data[0].lat}&lon=${data[0].lon}&units=metric&appid=${process.env.REACT_APP_WEATHER_API}`
       );
       const currentWeather = await currentRes.json();
-      currentWeather.iconurl = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`;
+      currentWeather.iconurl = `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`;
       setCurrentData(currentWeather);
 
       const resFore = await fetch(

@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchCoords = async () => {
       const geoRes = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=b563241a6190e19f031c952fddaa7811`
+        `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${process.env.REACT_APP_WEATHER_API}`
       );
       const data = await geoRes.json();
       const currentRes = await fetch(

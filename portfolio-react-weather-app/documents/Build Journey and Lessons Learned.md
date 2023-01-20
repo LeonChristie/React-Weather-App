@@ -1,0 +1,4 @@
+## About the Build and Lessons Learned
+<hr />
+
+I decided to build a weather app to translate what I had learned about the useState and useEffect hooks, and how they interact with each other, into a real project. This project also provided me with further experience building an application using the React style components and JSX. This app was my second expereince using APIs to display data in a project and this time, after further reading, I used the async and awiat syntax for more concise and readable code than the .then() syntax. In my next project using APIs I intend to use axios to diversify my expereince and write more concise code. This project was also my first expereince working with data provided in unix time format and I enjoyed getting stuck in to the complexity of converting and displaying it for local time of the search location using UTC offsets. 

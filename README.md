@@ -5,7 +5,8 @@ A web application created using create-react-app. Allows user to serach for a lo
 
 ### Deployment
 <hr />
-Deployed using Netlify.<br />
+
+Deployed using Netlify [here]().<br />
 <br />
 
 

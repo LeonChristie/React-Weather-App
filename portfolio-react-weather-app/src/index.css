@@ -17,7 +17,7 @@ input {
     background: #F7A164;
     border-radius: 15px;
     color: #4B4237;
-    box-shadow: rgba(255, 255, 255, 0.677) 0px 8px 24px 8px;
+    box-shadow: rgba(255, 255, 255, 0.15) 0px 8px 24px 8px;
     width: 80%;
     max-width: 1000px;
     font-weight: 300;
@@ -40,7 +40,7 @@ input:focus{
 
 /* CURRENT COMONENT */
 .temp-now{
-    font-size: 50px;
+    font-size: 40px;
 }
 .current-bottom{
     font-size: 20px;
@@ -98,4 +98,8 @@ input:focus{
     }
 }
 
-
+@media (max-width: 770px){
+    .temp-now{
+        font-size: 30px;
+    }
+}

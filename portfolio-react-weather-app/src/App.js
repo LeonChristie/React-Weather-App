@@ -9,7 +9,6 @@ function App() {
   const [location, setLocation] = useState();
   const [currentData, setCurrentData] = useState();
   const [forecastData, setForecastData] = useState();
-  const [forecastIcons, setForecastIcons] = useState();
 
   useEffect(() => {
     const fetchCoords = async () => {

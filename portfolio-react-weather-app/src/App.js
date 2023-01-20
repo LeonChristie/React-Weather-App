@@ -10,7 +10,6 @@ function App() {
   const [currentData, setCurrentData] = useState();
   const [forecastData, setForecastData] = useState();
 
-
   useEffect(() => {
     const fetchCoords = async () => {
       const geoRes = await fetch(
@@ -23,7 +22,7 @@ function App() {
       const currentWeather = await currentRes.json();
       currentWeather.iconurl = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`;
       setCurrentData(currentWeather);
-      console.log(currentWeather);
+
       const resFore = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&units=metric&appid=${process.env.REACT_APP_WEATHER_API}`
       );
@@ -41,7 +40,7 @@ function App() {
 
   return (
     <div className="container">
-      <Search submitSearch={submitSearch}/>
+      <Search submitSearch={submitSearch} />
       {typeof currentData != "undefined" ? (
         <CurrerntWeather currentData={currentData} />
       ) : (
